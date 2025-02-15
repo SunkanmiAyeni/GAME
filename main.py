@@ -4,13 +4,13 @@ import pygame
 
 # Constants
 SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 500
+SCREEN_HEIGHT = 700
 PLAYER_START_X = 370
 PLAYER_START_Y = 380
 ENEMY_START_Y_MIN = 50
 ENEMY_START_Y_MAX = 150
-ENEMY_SPEED_X = 4
-ENEMY_SPEED_Y = 4
+ENEMY_SPEED_X = 2
+ENEMY_SPEED_Y = 1
 BULLET_SPEED_Y = 10
 COLLISION_DISTANCE = 27
 
@@ -21,7 +21,7 @@ pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 # Background
-background = pygame.image.load('OIP.jpeg')
+background = pygame.image.load('chrismas.jpg')
 
 # Caption and Icon
 pygame.display.set_caption("Space Invader")
@@ -29,7 +29,7 @@ icon = pygame.image.load("fly3.jpg")
 pygame.display.set_icon(icon)
 
 # Player
-playerImg = pygame.image.load('man.png')
+playerImg = pygame.image.load('download.png')
 playerX = PLAYER_START_X
 playerY = PLAYER_START_Y
 playerX_change = 0
@@ -50,7 +50,7 @@ for _i in range(num_of_enemies):
     enemyY_change.append(ENEMY_SPEED_Y)
 
 # Bullet
-bulletImg = pygame.image.load('cannon.png')
+bulletImg = pygame.image.load('fly4.png')
 bulletX = 0
 bulletY = PLAYER_START_Y
 bulletX_change = 0
